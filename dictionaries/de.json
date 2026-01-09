@@ -1,0 +1,240 @@
+{
+  "header": {
+    "logo": "APEX",
+    "nav": {
+      "selling": "VERKAUFEN",
+      "buying": "KAUFEN",
+      "aboutUs": "ÜBER UNS",
+      "contactUs": "KONTAKT"
+    },
+    "cta": {
+      "full": "Kostenlose Immobilienbewertung",
+      "short": "Bewertung"
+    }
+  },
+  "hero": {
+    "subtitle": "KAUFEN, VERKAUFEN ODER IHRE IMMOBILIE IN DER ZENTRALSCHWEIZ UND ZÜRICH BEWERTEN LASSEN",
+    "title": "Wir lieben die Welt der Immobilien.",
+    "buttons": {
+      "valuate": "Immobilie bewerten",
+      "buy": "Immobilie kaufen"
+    }
+  },
+  "services": {
+    "sell": {
+      "title": "Immobilie verkaufen",
+      "paragraphs": [
+        "Persönliche Umstände, familiäre oder berufliche Veränderungen, wirtschaftliche Notwendigkeit, Umzug oder Erbschaft: Es gibt viele Gründe für den Verkauf einer Immobilie.",
+        "Egal, warum Sie Ihr Haus oder Ihre Wohnung verkaufen möchten: Wir finden den richtigen Käufer für Sie - schnell, zuverlässig und zum vereinbarten Ergebnis."
+      ]
+    },
+    "buy": {
+      "title": "Immobilie kaufen",
+      "paragraphs": [
+        "Immobilien sind einzigartig - genau wie Sie. Wir finden das perfekte Zuhause für Sie.",
+        "Mit unseren bewährten Scouting-Methoden passen wir Ihre Suche nicht nur an Ihre Wünsche und Erwartungen an. Wir entdecken oft neue Immobilien, lange bevor sie auf den Markt kommen."
+      ]
+    },
+    "valuate": {
+      "title": "Immobilie bewerten",
+      "paragraphs": [
+        "Möchten Sie wissen, wie viel Ihre Immobilie derzeit wert ist?",
+        "Wir bewerten Ihre Immobilie - online, unkompliziert, kostenlos. Und blitzschnell:",
+        "In weniger als 3 Minuten erhalten Sie das Ergebnis Ihrer Immobilienbewertung und eine Standortbewertung."
+      ]
+    }
+  },
+  "expertise": {
+    "section1": {
+      "title": "Es gibt viele Immobilienmakler in der Zentralschweiz und Zürich. Unsere Expertise ist einzigartig.",
+      "paragraphs": [
+        "Wir sind nicht nur langjährige Immobilienexperten, Finanzexperten und qualifizierte Gutachter. Vor allem sind wir leidenschaftliche Immobilienberater und Sie stehen im Mittelpunkt unserer Leidenschaft. Denn wir sind leidenschaftlich darin, Ihnen Sicherheit zu bieten - beim Kauf, Verkauf oder bei der Bewertung Ihrer Immobilie.",
+        "Und dank unserer Expertise gelingt es uns jedes Mal. Denn unsere Immobilienberatung macht den Unterschied."
+      ],
+      "button": "MEHR ERFAHREN"
+    },
+    "section2": {
+      "title": "Erfolgreiche Immobilienverkäufe: Unsere Referenzen",
+      "paragraphs": [
+        "Moderne Reihenwohnungen mit herrlicher Aussicht auf atemberaubende Landschaften. Stilvolle Wohnungen mit freiem Blick auf das Berg- und Seepanorama. Geräumige Häuser in sonniger Lage und naturnah.",
+        "Unsere Immobilien haben alle eines gemeinsam: Sie bieten eine hohe Lebensqualität!"
+      ],
+      "button": "UNSERE REFERENZEN ENTDECKEN"
+    },
+    "section3": {
+      "title": "Aktuelle Immobilien-Jobs: Werden Sie Teil unserer Leidenschaft für Immobilien",
+      "paragraphs": [
+        "Haben Sie ein Faible für hochwertige Immobilien? Wir auch.",
+        "Verkaufen, kaufen, bewerten oder beraten: Bei uns dreht sich alles um den Immobilienmarkt. Und um Menschen.",
+        "Wir lieben es, Menschen zum Lächeln zu bringen. Weil sie ihre Traumimmobilie gefunden haben. Oder weil ihre Immobilie zu einem fabelhaften Preis verkauft wurde.",
+        "Teilen Sie unsere Leidenschaft für die Immobilienwelt? Dann kontaktieren Sie uns - denn wir haben ein Match."
+      ],
+      "button": "IMMOBILIEN-JOBS ENTDECKEN"
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Häufig gestellte Fragen",
+    "questions": [
+      {
+        "question": "Wie erfahre ich, was meine Immobilie wert ist?",
+        "answer": "Wir bieten eine kostenlose, unverbindliche Immobilienbewertung an. Unsere Experten bewerten Ihre Immobilie anhand von Lage, Zustand, Markttrends und vergleichbaren Verkäufen. Sie erhalten innerhalb von 3 Minuten einen detaillierten Bericht mit unserem Online-Tool oder vereinbaren Sie eine persönliche Bewertung für eine umfassende Einschätzung."
+      },
+      {
+        "question": "Wie lange dauert es, eine Immobilie zu verkaufen?",
+        "answer": "Der Zeitrahmen variiert je nach Marktbedingungen, Immobilientyp und Preisgestaltung. Im Durchschnitt werden gut bepreiste Immobilien in unserer Region innerhalb von 3-6 Monaten verkauft. Unsere Marketingstrategien und unser umfangreiches Käufernetzwerk helfen oft, schnellere Verkäufe zu erzielen. Wir geben Ihnen bei unserem ersten Beratungsgespräch einen realistischen Zeitrahmen."
+      },
+      {
+        "question": "Welche Kosten sind mit dem Verkauf einer Immobilie verbunden?",
+        "answer": "Die Verkaufskosten umfassen in der Regel unsere Provision, Notargebühren und etwaige ausstehende Hypothekenkosten. Wir stellen Ihnen im Voraus eine transparente Aufschlüsselung aller Kosten zur Verfügung, damit es keine Überraschungen gibt. Unsere Provision ist wettbewerbsfähig und nur bei erfolgreichem Verkauf Ihrer Immobilie fällig."
+      },
+      {
+        "question": "Helfen Sie bei der Immobiliensuche ausserhalb der Schweiz?",
+        "answer": "Unsere Expertise konzentriert sich auf die Zentralschweiz und die Region Zürich, wo wir über tiefgreifende Marktkenntnisse und umfangreiche Netzwerke verfügen. Für internationale Immobilien können wir Sie mit vertrauenswürdigen Partneragenturen in anderen Ländern verbinden."
+      },
+      {
+        "question": "Was macht Ihre Immobilienbewertung anders?",
+        "answer": "Unsere Bewertungen kombinieren fortschrittliche Datenanalyse mit lokaler Expertise. Wir berücksichtigen nicht nur vergleichbare Verkäufe, sondern auch zukünftige Entwicklungspläne, Nachbarschaftstrends und einzigartige Immobilienmerkmale. Unsere Gutachter sind zertifizierte Fachleute mit jahrzehntelanger Erfahrung auf dem Schweizer Immobilienmarkt."
+      },
+      {
+        "question": "Können Sie mir helfen, Off-Market-Immobilien zu finden?",
+        "answer": "Ja! Viele unserer besten Immobilien erreichen nie öffentliche Angebote. Durch unser umfangreiches Netzwerk und proaktive Scouting-Methoden entdecken wir oft Immobilien, bevor sie auf den Markt kommen. Registrieren Sie sich bei uns, um frühzeitig Zugang zu exklusiven Angeboten zu erhalten, die Ihren Kriterien entsprechen."
+      }
+    ],
+    "cta": {
+      "text": "Haben Sie noch Fragen? Wir sind für Sie da.",
+      "button": "Kontaktieren Sie uns"
+    }
+  },
+  "sellPage": {
+    "hero": {
+      "subtitle": "VERKAUFEN SIE IHRE IMMOBILIE IN DER ZENTRALSCHWEIZ UND ZÜRICH",
+      "title": "Verkaufen Sie Ihre Immobilie zum besten Preis.",
+      "description": "Persönliche Umstände, familiäre Veränderungen oder neue Möglichkeiten - was auch immer Ihr Grund für den Verkauf ist, wir sorgen für das bestmögliche Ergebnis.",
+      "cta": "Kostenlose Bewertung",
+      "secondaryCta": "Kontaktieren Sie uns"
+    },
+    "process": {
+      "label": "SO FUNKTIONIERT ES",
+      "title": "Ihr Weg zum erfolgreichen Verkauf",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Kostenlose Bewertung",
+          "description": "Wir bewerten den Marktwert Ihrer Immobilie mit unserer Expertise und lokalen Kenntnissen."
+        },
+        {
+          "number": "02",
+          "title": "Professionelles Marketing",
+          "description": "Ihre Immobilie wird mit professionellen Fotos, virtuellen Rundgängen und gezielter Werbung präsentiert."
+        },
+        {
+          "number": "03",
+          "title": "Käuferauswahl",
+          "description": "Wir qualifizieren potenzielle Käufer und übernehmen alle Besichtigungen und Verhandlungen für Sie."
+        },
+        {
+          "number": "04",
+          "title": "Erfolgreicher Abschluss",
+          "description": "Wir begleiten Sie durch den gesamten Prozess bis zur Schlüsselübergabe."
+        }
+      ]
+    },
+    "benefits": {
+      "label": "WARUM MIT UNS VERKAUFEN",
+      "title": "Ihr Erfolg ist unsere Priorität",
+      "description": "Mit jahrzehntelanger Erfahrung auf dem Schweizer Immobilienmarkt wissen wir genau, wie wir Ihre Immobilie für maximalen Wert positionieren und verkaufen.",
+      "items": [
+        "Expertenwissen über die Zentralschweiz und Zürich",
+        "Umfangreiches Netzwerk qualifizierter Käufer",
+        "Professionelle Fotografie und virtuelle Rundgänge",
+        "Transparente Kommunikation während des gesamten Prozesses",
+        "Kein Verkauf, keine Gebühr - wir sind nur erfolgreich, wenn Sie es sind"
+      ],
+      "cta": "Starten Sie Ihre Reise",
+      "stats": [
+        {
+          "value": "500+",
+          "label": "Verkaufte Immobilien"
+        },
+        {
+          "value": "98%",
+          "label": "Kundenzufriedenheit"
+        },
+        {
+          "value": "45",
+          "label": "Tage durchschnittliche Verkaufszeit"
+        },
+        {
+          "value": "15+",
+          "label": "Jahre Erfahrung"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, Ihre Immobilie zu verkaufen?",
+      "description": "Starten Sie mit einer kostenlosen, unverbindlichen Immobilienbewertung. Unsere Experten liefern Ihnen eine genaue Markteinschätzung.",
+      "primaryButton": "Kostenlose Bewertung",
+      "secondaryButton": "Termin vereinbaren"
+    },
+    "support": {
+      "title": "Wie wir Sie beim Verkauf Ihrer Immobilie unterstützen",
+      "valuation": {
+        "title": "Bewertung",
+        "subtitle": "für den bestmöglichen Verkaufspreis",
+        "paragraphs": [
+          "Wir analysieren den Markt - ständig, detailliert und sehr präzise. Wir verwenden auch anerkannte Modelle, um den Marktpreis über verschiedene Finanzierungsinstitute zu verifizieren.",
+          "Wir kennen daher die lokalen Preise und wissen genau, wie hoch Sie den Preis für Ihre Immobilie in der Region ansetzen können.",
+          "Das garantiert Ihnen die ideale Positionierung am Markt. Und auch das bestmögliche Ergebnis."
+        ]
+      },
+      "marketing": {
+        "title": "Verkauf und Marketing",
+        "subtitle": "für die größtmögliche Nachfrage",
+        "paragraphs": [
+          "Unser bewährtes Marketingkonzept steigert nicht nur das Interesse an Ihrer Immobilie, sondern auch die Nachfrage.",
+          "Mit einem ansprechenden Exposé setzen wir die richtigen Impulse, um Emotionen in Ihrer Zielgruppe zu wecken. Mit Liebe zum Detail. Ansprechend. Professionell. Überzeugend.",
+          "Ist Ihre Immobilie leer? Das ist auch kein Problem: Wir können sie digital einrichten.",
+          "So helfen wir Ihnen, einen erfolgreichen und lukrativen Verkauf Ihrer Immobilie zu erzielen."
+        ]
+      },
+      "viewings": {
+        "title": "Besichtigungen",
+        "subtitle": "für optimal geeignete Interessenten",
+        "paragraphs": [
+          "Wir filtern alle Anfragen für Sie, prüfen die Qualifikationen der Interessenten und führen Bonitätsprüfungen bei potenziellen Käufern durch.",
+          "Wir organisieren Besichtigungen für Sie mit ideal geeigneten Kaufinteressenten, die ernsthaft am Kauf interessiert sind. Wir nehmen uns so viel Zeit für jeden Interessenten, wie er braucht.",
+          "Auch nach der Besichtigung betreuen wir Ihre Kaufinteressenten intensiv: Wir senden ihnen Unterlagen, klären offene Fragen und unterstützen sie bei ihren Finanzierungsmöglichkeiten."
+        ]
+      }
+    }
+  },
+  "footer": {
+    "cta": {
+      "title": "Möchten Sie Ihre Immobilienreise gemeinsam mit uns starten?",
+      "subtitle": "Dann lernen wir uns kennen.",
+      "links": {
+        "call": "Rufen Sie uns an",
+        "email": "Senden Sie uns eine E-Mail",
+        "form": "Nutzen Sie das Kontaktformular"
+      }
+    },
+    "tagline": "Ihr vertrauenswürdiger Partner für den Kauf, Verkauf und die Bewertung von Immobilien in der Zentralschweiz und Zürich.",
+    "location": {
+      "label": "Standort",
+      "address1": "Rothusstrasse 23",
+      "address2": "6331 Hünenberg"
+    },
+    "contact": {
+      "label": "Kontakt"
+    },
+    "social": {
+      "label": "Soziale Medien"
+    },
+    "copyright": "APEX Property. Alle Rechte vorbehalten.",
+    "links": {
+      "privacy": "Datenschutzerklärung",
+      "imprint": "Impressum"
+    }
+  }
+}

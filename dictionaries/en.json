@@ -1,0 +1,240 @@
+{
+  "header": {
+    "logo": "APEX",
+    "nav": {
+      "selling": "SELLING",
+      "buying": "BUYING",
+      "aboutUs": "ABOUT US",
+      "contactUs": "CONTACT US"
+    },
+    "cta": {
+      "full": "Free Property Valuation",
+      "short": "Valuation"
+    }
+  },
+  "hero": {
+    "subtitle": "BUY, SELL OR HAVE YOUR PROPERTY VALUED IN CENTRAL SWITZERLAND AND ZURICH",
+    "title": "We love the world of property.",
+    "buttons": {
+      "valuate": "Valuate Property",
+      "buy": "Buy Property"
+    }
+  },
+  "services": {
+    "sell": {
+      "title": "Sell property",
+      "paragraphs": [
+        "Personal circumstances, family or career changes, economic necessity, relocation, or inheritance: there are many reasons for selling a property.",
+        "No matter why you want to sell your house or flat: We will find the right buyer for you - quickly, reliably and at the agreed outcome."
+      ]
+    },
+    "buy": {
+      "title": "Buy property",
+      "paragraphs": [
+        "Properties are unique - just like you are. We will find the perfect home for you.",
+        "With our tried and tested scouting methods, we not only customize your search to your wishes and expectations. We often discover new properties long before they even come onto the market."
+      ]
+    },
+    "valuate": {
+      "title": "Valuate property",
+      "paragraphs": [
+        "Would you like to know how much your property is currently worth?",
+        "We value your property - online, uncomplicated, free of charge. And at lightning speed:",
+        "In less than 3 minutes you will receive the result of your property valuation and a location evaluation."
+      ]
+    }
+  },
+  "expertise": {
+    "section1": {
+      "title": "There are many estate agents in Central Switzerland and Zurich. Our expertise is unique.",
+      "paragraphs": [
+        "We are not just long-standing property experts, financial experts and qualified valuers. Above all, we are passionate property consultants and you are the focus of our passion. Because we are passionate about offering you security - when buying, selling, or valuing your property.",
+        "And thanks to our expertise, we succeed each and every time. Because our property advice makes the difference."
+      ],
+      "button": "LEARN MORE"
+    },
+    "section2": {
+      "title": "Successful property sales: Our credentials",
+      "paragraphs": [
+        "Modern terraced flats with marvellous views of breathtaking landscapes. Stylish flats with unobstructed views of the mountain and lake panorama. Spacious houses in a sunny location and close to nature.",
+        "Our properties all have one thing in common: they offer a high quality of life!"
+      ],
+      "button": "DISCOVER OUR CREDENTIALS"
+    },
+    "section3": {
+      "title": "Current property jobs: Become part of our passion for property",
+      "paragraphs": [
+        "Do you have a soft spot for high-quality property? Us too.",
+        "Selling, buying, valuing or consulting: for us, everything focuses on the property market. And about people.",
+        "We love to make people smile. Because they found their dream property. Or because their property has been sold at a fabulous price.",
+        "Do you share our passion for the property world? Then contact us - because we have a match."
+      ],
+      "button": "DISCOVER PROPERTY JOBS"
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently asked questions",
+    "questions": [
+      {
+        "question": "How do I know what my property is worth?",
+        "answer": "We offer a free, no-obligation property valuation. Our experts will assess your property based on location, condition, market trends, and comparable sales. You'll receive a detailed report within 3 minutes using our online tool, or schedule an in-person assessment for a comprehensive evaluation."
+      },
+      {
+        "question": "How long does it take to sell a property?",
+        "answer": "The timeline varies depending on market conditions, property type, and pricing. On average, well-priced properties in our region sell within 3-6 months. Our marketing strategies and extensive buyer network often help achieve faster sales. We'll provide a realistic timeline during our initial consultation."
+      },
+      {
+        "question": "What costs are involved in selling a property?",
+        "answer": "Selling costs typically include our commission, notary fees, and any outstanding mortgage costs. We provide a transparent breakdown of all costs upfront so there are no surprises. Our commission is competitive and only payable upon successful sale of your property."
+      },
+      {
+        "question": "Do you help with property searches outside Switzerland?",
+        "answer": "Our expertise is focused on Central Switzerland and Zurich regions where we have deep market knowledge and extensive networks. For international properties, we can connect you with trusted partner agencies in other countries."
+      },
+      {
+        "question": "What makes your property valuation different?",
+        "answer": "Our valuations combine advanced data analytics with local expertise. We consider not just comparable sales, but also future development plans, neighborhood trends, and unique property features. Our valuers are certified professionals with decades of experience in the Swiss property market."
+      },
+      {
+        "question": "Can you help me find off-market properties?",
+        "answer": "Yes! Many of our best properties never reach public listings. Through our extensive network and proactive scouting methods, we often discover properties before they hit the market. Register with us to get early access to exclusive listings that match your criteria."
+      }
+    ],
+    "cta": {
+      "text": "Still have questions? We're here to help.",
+      "button": "Contact Us"
+    }
+  },
+  "sellPage": {
+    "hero": {
+      "subtitle": "SELL YOUR PROPERTY IN CENTRAL SWITZERLAND AND ZURICH",
+      "title": "Sell your property at the best price.",
+      "description": "Personal circumstances, family changes, or new opportunities - whatever your reason for selling, we ensure you get the best possible outcome.",
+      "cta": "Free Valuation",
+      "secondaryCta": "Contact Us"
+    },
+    "process": {
+      "label": "HOW IT WORKS",
+      "title": "Your path to a successful sale",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Free Valuation",
+          "description": "We assess your property's market value using our expertise and local knowledge."
+        },
+        {
+          "number": "02",
+          "title": "Professional Marketing",
+          "description": "Your property is presented with professional photos, virtual tours, and targeted advertising."
+        },
+        {
+          "number": "03",
+          "title": "Buyer Selection",
+          "description": "We qualify potential buyers and handle all viewings and negotiations on your behalf."
+        },
+        {
+          "number": "04",
+          "title": "Successful Closing",
+          "description": "We guide you through the entire process until the keys are handed over."
+        }
+      ]
+    },
+    "benefits": {
+      "label": "WHY SELL WITH US",
+      "title": "Your success is our priority",
+      "description": "With decades of experience in the Swiss property market, we know exactly how to position and sell your property for maximum value.",
+      "items": [
+        "Expert market knowledge of Central Switzerland and Zurich",
+        "Extensive network of qualified buyers",
+        "Professional photography and virtual tours",
+        "Transparent communication throughout the process",
+        "No sale, no fee - we only succeed when you do"
+      ],
+      "cta": "Start Your Journey",
+      "stats": [
+        {
+          "value": "500+",
+          "label": "Properties Sold"
+        },
+        {
+          "value": "98%",
+          "label": "Client Satisfaction"
+        },
+        {
+          "value": "45",
+          "label": "Days Average Sale Time"
+        },
+        {
+          "value": "15+",
+          "label": "Years Experience"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to sell your property?",
+      "description": "Get started with a free, no-obligation property valuation. Our experts will provide you with an accurate market assessment.",
+      "primaryButton": "Get Free Valuation",
+      "secondaryButton": "Schedule a Call"
+    },
+    "support": {
+      "title": "How we support you in selling your property",
+      "valuation": {
+        "title": "Valuation",
+        "subtitle": "for the best possible sales price",
+        "paragraphs": [
+          "We analyse the market - constantly, in detail and very precisely. We also use recognised models to verify the market price via various financing institutions.",
+          "We therefore know the local prices and know exactly how high you can set the price for your property in the region.",
+          "This guarantees you the ideal positioning on the market. And the best possible result too."
+        ]
+      },
+      "marketing": {
+        "title": "Sales and marketing",
+        "subtitle": "for the greatest possible demand",
+        "paragraphs": [
+          "Our proven marketing concept not only increases interest in your property, but also demand.",
+          "With an appealing exposé, we set the right impulses to arouse emotions in your target group. With attention to detail. Appealing. Professionally. Convincing.",
+          "Is your property empty? That's no problem either: we can furnish it digitally.",
+          "This is how we help you to achieve a successful and lucrative sale of your property."
+        ]
+      },
+      "viewings": {
+        "title": "Site viewings",
+        "subtitle": "for optimally suited interested parties",
+        "paragraphs": [
+          "We filter all enquiries for you, check the qualifications of interested parties and carry out credit checks on potential buyers.",
+          "We organise site viewings for you with ideally suited prospective buyers who are genuinely interested in buying. We take as much time for each prospective buyer as they need.",
+          "Even after the site viewing, we provide your prospective buyers with intensive support: we send them documents, clarify any unanswered questions and support them with their financing options."
+        ]
+      }
+    }
+  },
+  "footer": {
+    "cta": {
+      "title": "Would you like to start your property journey together with us?",
+      "subtitle": "Then let us get to know each other.",
+      "links": {
+        "call": "Give us a call",
+        "email": "Send us an e-mail",
+        "form": "Use the contact form"
+      }
+    },
+    "tagline": "Your trusted partner for buying, selling, and valuing properties in Central Switzerland and Zurich.",
+    "location": {
+      "label": "Location",
+      "address1": "Rothusstrasse 23",
+      "address2": "6331 Hünenberg"
+    },
+    "contact": {
+      "label": "Contact"
+    },
+    "social": {
+      "label": "Social"
+    },
+    "copyright": "APEX Property. All rights reserved.",
+    "links": {
+      "privacy": "Privacy Policy",
+      "imprint": "Imprint"
+    }
+  }
+}
