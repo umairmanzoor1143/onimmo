@@ -1,0 +1,206 @@
+import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import { Dictionary } from "@/lib/dictionaries";
+import { PartnerLogo } from "@/components/partner-logo";
+
+interface TrustSectionProps {
+    dictionary: Dictionary;
+}
+
+// Partner logos - placeholder images for now
+const partners = [
+    { name: "Partner 1", logo: "/assets/partners/partner1.svg" },
+    { name: "Partner 2", logo: "/assets/partners/partner2.svg" },
+    { name: "Partner 3", logo: "/assets/partners/partner3.svg" },
+    { name: "Partner 4", logo: "/assets/partners/partner4.svg" },
+    { name: "Partner 5", logo: "/assets/partners/partner5.svg" },
+    { name: "Partner 6", logo: "/assets/partners/partner6.svg" },
+];
+
+export default function TrustSection({ dictionary }: TrustSectionProps) {
+    const t = dictionary.trust;
+    // Stats data derived from dictionary
+    const stats = [
+        {
+            // @ts-ignore
+            label: t.stats.experience.label,
+            value: "15",
+            suffix: "+",
+            // @ts-ignore
+            description: t.stats.experience.description
+        },
+        {
+            // @ts-ignore
+            label: t.stats.properties.label,
+            value: "500",
+            suffix: "+",
+            // @ts-ignore
+            description: t.stats.properties.description
+        },
+        {
+            // @ts-ignore
+            label: t.stats.clients.label,
+            value: "300",
+            suffix: "+",
+            // @ts-ignore
+            description: t.stats.clients.description
+        },
+    ];
+
+    return (
+        <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1400px] mx-auto">
+                {/* Section Header */}
+                <div className="mb-12 md:mb-16">
+                    <h2
+                        className="text-[#0F172A] text-2xl md:text-3xl font-semibold tracking-tight mb-2"
+                        style={{ fontFamily: "var(--font-frutiger), var(--font-display), sans-serif" }}
+                    >
+                        {t.title}
+                    </h2>
+                    <p className="text-[#6B7280] text-base md:text-lg">
+                        {t.subtitle}
+                    </p>
+                </div>
+
+                {/* Main Grid Layout */}
+                <div className="flex flex-col gap-16 md:gap-24">
+                    {/* Bento Grid Stats */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5">
+                        {/* Left Column - Large Image */}
+                        <div
+                            className="relative w-full rounded-[32px] overflow-hidden"
+                            style={{ height: "600px" }}
+                        >
+                            <div
+                                className="absolute inset-0"
+                                style={{
+                                    backgroundImage: "url('/assets/hero-building.png')",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                }}
+                            />
+                        </div>
+
+                        {/* Right Column - 2x2 Grid that matches left height */}
+                        <div
+                            className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-5"
+                            style={{ height: "600px" }}
+                        >
+
+                            {/* Stat Card 1 - Global Reach */}
+                            <div className="bg-[#F5F5F5] rounded-[24px] p-6 md:p-8 flex flex-col justify-between">
+                                <p className="text-[#6B7280] text-xs font-medium uppercase tracking-wider">
+                                    {stats[0].label}
+                                </p>
+                                <div>
+                                    <div className="flex items-baseline">
+                                        <span
+                                            className="text-[#0F172A] text-5xl md:text-6xl lg:text-7xl font-light"
+                                            style={{ fontFamily: "var(--font-frutiger), var(--font-display), sans-serif" }}
+                                        >
+                                            {stats[0].value}
+                                        </span>
+                                        <span className="text-[#84CC16] text-2xl md:text-3xl font-light ml-1">
+                                            {stats[0].suffix}
+                                        </span>
+                                    </div>
+                                    <p className="text-[#6B7280] text-sm mt-2">
+                                        {stats[0].description}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Stat Card 2 - Local Expertise */}
+                            <div className="bg-[#F5F5F5] rounded-[24px] p-6 md:p-8 flex flex-col justify-between">
+                                <p className="text-[#6B7280] text-xs font-medium uppercase tracking-wider">
+                                    {stats[1].label}
+                                </p>
+                                <div>
+                                    <div className="flex items-baseline">
+                                        <span
+                                            className="text-[#0F172A] text-5xl md:text-6xl lg:text-7xl font-light"
+                                            style={{ fontFamily: "var(--font-frutiger), var(--font-display), sans-serif" }}
+                                        >
+                                            {stats[1].value}
+                                        </span>
+                                        <span className="text-[#84CC16] text-2xl md:text-3xl font-light ml-1">
+                                            {stats[1].suffix}
+                                        </span>
+                                    </div>
+                                    <p className="text-[#6B7280] text-sm mt-2">
+                                        {stats[1].description}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Stat Card 3 - Our Impact */}
+                            <div className="bg-[#F5F5F5] rounded-[24px] p-6 md:p-8 flex flex-col justify-between">
+                                <p className="text-[#6B7280] text-xs font-medium uppercase tracking-wider">
+                                    {stats[2].label}
+                                </p>
+                                <div>
+                                    <div className="flex items-baseline">
+                                        <span
+                                            className="text-[#0F172A] text-5xl md:text-6xl lg:text-7xl font-light"
+                                            style={{ fontFamily: "var(--font-frutiger), var(--font-display), sans-serif" }}
+                                        >
+                                            {stats[2].value}
+                                        </span>
+                                        <span className="text-[#84CC16] text-2xl md:text-3xl font-light ml-1">
+                                            {stats[2].suffix}
+                                        </span>
+                                    </div>
+                                    <p className="text-[#6B7280] text-sm mt-2">
+                                        {stats[2].description}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Image Card - Bottom Right */}
+                            <div className="relative rounded-[24px] overflow-hidden">
+                                <div
+                                    className="absolute inset-0"
+                                    style={{
+                                        backgroundImage: "url('/assets/hero-building.png')",
+                                        backgroundSize: "cover",
+                                        backgroundPosition: "center",
+                                    }}
+                                />
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {/* Infinite Partner Slider */}
+                    <div>
+                        <p className="text-[#6B7280] text-sm font-medium uppercase tracking-wider mb-8 text-center">
+                            {t.partners.title}
+                        </p>
+                        <InfiniteSlider
+                            gap={48}
+                            duration={30}
+                            durationOnHover={60}
+                            className="py-4"
+                        >
+                            {partners.map((partner, index) => (
+                                <div
+                                    key={index}
+                                    className="h-12 w-32 flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300"
+                                >
+                                    {partner.logo ? (
+                                        <PartnerLogo name={partner.name} logo={partner.logo} />
+                                    ) : (
+                                        <span className="text-[#6B7280] text-sm font-medium">
+                                            {partner.name}
+                                        </span>
+                                    )}
+                                </div>
+                            ))}
+                        </InfiniteSlider>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    );
+}

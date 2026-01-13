@@ -5,49 +5,30 @@ import { useRouter, usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useDictionary } from "./dictionary-provider";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
-  const [isDarkBg, setIsDarkBg] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { dictionary, locale } = useDictionary();
   const router = useRouter();
   const pathname = usePathname();
 
   const switchLanguage = (newLocale: string) => {
-    // Get the path without the current locale
     const pathWithoutLocale = pathname.replace(`/${locale}`, "") || "/";
-    // Navigate to the new locale path
     router.push(`/${newLocale}${pathWithoutLocale}`);
     router.refresh();
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll("[data-bg]");
-      const headerHeight = 80;
-
-      let currentBg = "light";
-      let closestTop = -Infinity;
-
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top + 100 <= headerHeight && rect.bottom > headerHeight) {
-          if (rect.top > closestTop) {
-            closestTop = rect.top;
-            currentBg = section.getAttribute("data-bg") || "light";
-          }
-        }
-      });
-
-      setIsDarkBg(currentBg === "dark");
+      setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -60,188 +41,165 @@ export default function Header() {
 
   const t = dictionary.header;
 
+  const isActive = (path: string) => {
+    if (path === `/${locale}`) {
+      return pathname === path;
+    }
+    return pathname === path || pathname.startsWith(`${path}/`);
+  };
+
+  const navItems = [
+    { href: `/${locale}`, label: t.nav.home },
+    { href: `/${locale}/selling`, label: t.nav.sales },
+    { href: `/${locale}/purchasing`, label: t.nav.purchasing },
+    { href: `/${locale}/property-management`, label: t.nav.propertyManagement },
+    { href: `/${locale}/partners`, label: t.nav.partners },
+    { href: `/${locale}/about`, label: t.nav.aboutUs },
+    { href: `/${locale}/contact`, label: t.nav.contact },
+  ];
+
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 transition-all duration-300 ${
-          isDarkBg || isMenuOpen ? "bg-[#0F172A]/95 backdrop-blur-sm" : "bg-transparent"
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 py-4 transition-all duration-500"
         data-testid="header"
       >
-        <div className="max-w-[1800px] mx-auto flex items-center justify-between h-full">
+        <div
+          className={`max-w-[1600px] mx-auto flex items-center justify-between h-[72px] px-6 lg:px-8 rounded-full transition-all duration-500 ${isScrolled || isMenuOpen
+            ? "bg-white/80 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.08)]"
+            : "bg-white/10 backdrop-blur-md border border-white/10"
+            }`}
+        >
           {/* Logo */}
-          <div className="flex items-center gap-6 lg:gap-14" data-testid="logo">
-            <span
-              className={`font-bold text-xl sm:text-2xl tracking-wide transition-colors duration-300 ${
-                isDarkBg || isMenuOpen ? "text-white" : "text-[#0F172A]"
-              }`}
-            >
-              {t.logo}
-            </span>
+          <Link href={`/${locale}`} className="flex items-center gap-3">
+              <Image src="/logo.png" alt="Logo" width={120} height={120} />
+          </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8 xl:gap-12" data-testid="nav">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden lg:flex items-center gap-10">
+            {navItems.map((item) => (
               <Link
-                href="/selling"
-                className={`text-base xl:text-lg font-medium hover:text-[#932A12] transition-colors ${
-                  isDarkBg ? "text-white" : "text-[#0F172A]"
-                }`}
+                key={item.href}
+                href={item.href}
+                className={`text-[15px] font-medium transition-colors duration-300 hover:text-[#932A12] ${isActive(item.href)
+                  ? "text-[#932A12]"
+                  : isScrolled
+                    ? "text-[#34435E]"
+                    : "text-white/80"
+                  }`}
               >
-                {t.nav.selling}
+                {item.label}
               </Link>
-              <a
-                href="#"
-                className={`text-base xl:text-lg font-medium hover:text-[#932A12] transition-colors ${
-                  isDarkBg ? "text-white/70" : "text-[#34435E]"
-                }`}
-              >
-                {t.nav.buying}
-              </a>
-              <a
-                href="#"
-                className={`text-base xl:text-lg font-medium hover:text-[#932A12] transition-colors ${
-                  isDarkBg ? "text-white/70" : "text-[#34435E]"
-                }`}
-              >
-                {t.nav.aboutUs}
-              </a>
-              <a
-                href="#"
-                className={`text-base xl:text-lg font-medium hover:text-[#932A12] transition-colors ${
-                  isDarkBg ? "text-white/70" : "text-[#34435E]"
-                }`}
-              >
-                {t.nav.contactUs}
-              </a>
-            </nav>
-          </div>
+            ))}
+          </nav>
 
           {/* Desktop Right Side */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {/* Language Switcher */}
-            <div className="flex items-center gap-3" data-testid="lang-switcher">
+            <div className="flex items-center gap-1 p-1 rounded-full bg-white/10 backdrop-blur-sm">
               <button
                 onClick={() => switchLanguage("de")}
-                className={`text-base xl:text-lg font-medium transition-colors ${
-                  locale === "de"
-                    ? "text-[#932A12]"
-                    : isDarkBg
-                    ? "text-white/70 hover:text-white"
-                    : "text-[#34435E] hover:text-[#0F172A]"
-                }`}
+                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${locale === "de"
+                  ? "bg-white text-[#0F172A] shadow-sm"
+                  : isScrolled
+                    ? "text-[#34435E] hover:text-[#0F172A]"
+                    : "text-white/70 hover:text-white"
+                  }`}
               >
                 DE
               </button>
               <button
                 onClick={() => switchLanguage("en")}
-                className={`text-base xl:text-lg font-medium transition-colors ${
-                  locale === "en"
-                    ? "text-[#932A12]"
-                    : isDarkBg
-                    ? "text-white/70 hover:text-white"
-                    : "text-[#34435E] hover:text-[#0F172A]"
-                }`}
+                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${locale === "en"
+                  ? "bg-white text-[#0F172A] shadow-sm"
+                  : isScrolled
+                    ? "text-[#34435E] hover:text-[#0F172A]"
+                    : "text-white/70 hover:text-white"
+                  }`}
               >
                 EN
               </button>
             </div>
-
-            <button
-              className="bg-[#F5E6E3] text-[#932A12] px-6 xl:px-8 py-3 xl:py-4 rounded-full text-base xl:text-lg font-semibold flex items-center gap-2 xl:gap-3 hover:bg-[#EDD5D0] transition-all"
-              data-testid="button-get-start"
-            >
-              <span className="hidden xl:inline">{t.cta.full}</span>
-              <span className="xl:hidden">{t.cta.short}</span>
-              <div className="w-6 h-6 xl:w-7 xl:h-7 bg-white rounded-full flex items-center justify-center">
-                <ArrowUpRight className="w-4 h-4 xl:w-5 xl:h-5 text-[#932A12]" />
-              </div>
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`lg:hidden p-2 transition-colors ${
-              isDarkBg || isMenuOpen ? "text-white" : "text-[#0F172A]"
-            }`}
+            className={`lg:hidden p-2.5 rounded-full transition-all duration-300 ${isScrolled || isMenuOpen
+              ? "text-[#0F172A] hover:bg-gray-100"
+              : "text-white hover:bg-white/10"
+              }`}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </header>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Glass style */}
       <div
-        className={`fixed inset-0 z-40 bg-[#0F172A] transition-transform duration-300 lg:hidden ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed inset-0 z-40 transition-all duration-500 lg:hidden ${isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       >
-        <div className="flex flex-col h-full pt-24 px-6 pb-8">
-          {/* Mobile Navigation */}
-          <nav className="flex flex-col gap-6 flex-1">
-            <a
-              href="#"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-white text-2xl sm:text-3xl font-medium hover:text-[#932A12] transition-colors"
-            >
-              {t.nav.selling}
-            </a>
-            <a
-              href="#"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-white/70 text-2xl sm:text-3xl font-medium hover:text-[#932A12] transition-colors"
-            >
-              {t.nav.buying}
-            </a>
-            <a
-              href="#"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-white/70 text-2xl sm:text-3xl font-medium hover:text-[#932A12] transition-colors"
-            >
-              {t.nav.aboutUs}
-            </a>
-            <a
-              href="#"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-white/70 text-2xl sm:text-3xl font-medium hover:text-[#932A12] transition-colors"
-            >
-              {t.nav.contactUs}
-            </a>
+        {/* Backdrop */}
+        <div
+          className="absolute inset-0 bg-[#0F172A]/60 backdrop-blur-xl"
+          onClick={() => setIsMenuOpen(false)}
+        />
+
+        {/* Menu Content */}
+        <div
+          className={`absolute inset-x-4 top-28 bg-white/95 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/20 transition-all duration-500 ${isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-8 opacity-0"
+            }`}
+        >
+          <nav className="flex flex-col gap-4 mb-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className={`text-xl font-medium py-3 px-4 rounded-xl hover:bg-gray-100 transition-colors ${isActive(item.href)
+                  ? "text-[#932A12] bg-gray-50"
+                  : "text-[#34435E]"
+                  }`}
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
-          {/* Mobile Bottom */}
-          <div className="space-y-6">
-            {/* Language Switcher */}
-            <div className="flex items-center gap-4">
-              <button
-                onClick={() => {
-                  switchLanguage("de");
-                  setIsMenuOpen(false);
-                }}
-                className={`text-lg font-medium transition-colors ${
-                  locale === "de" ? "text-[#932A12]" : "text-white/70"
+          {/* Language Switcher */}
+          <div className="flex items-center gap-2 mb-6">
+            <button
+              onClick={() => {
+                switchLanguage("de");
+                setIsMenuOpen(false);
+              }}
+              className={`px-4 py-2 rounded-full text-base font-medium transition-all ${locale === "de"
+                ? "bg-[#0F172A] text-white"
+                : "bg-gray-100 text-[#34435E]"
                 }`}
-              >
-                DE
-              </button>
-              <button
-                onClick={() => {
-                  switchLanguage("en");
-                  setIsMenuOpen(false);
-                }}
-                className={`text-lg font-medium transition-colors ${
-                  locale === "en" ? "text-[#932A12]" : "text-white/70"
+            >
+              DE
+            </button>
+            <button
+              onClick={() => {
+                switchLanguage("en");
+                setIsMenuOpen(false);
+              }}
+              className={`px-4 py-2 rounded-full text-base font-medium transition-all ${locale === "en"
+                ? "bg-[#0F172A] text-white"
+                : "bg-gray-100 text-[#34435E]"
                 }`}
-              >
-                EN
-              </button>
-            </div>
-
-            <button className="w-full bg-[#932A12] text-white px-6 py-4 rounded-full text-lg font-semibold flex items-center justify-center gap-3 hover:bg-[#6F1A07] transition-all">
-              {t.cta.full}
-              <ArrowUpRight className="w-5 h-5" />
+            >
+              EN
             </button>
           </div>
+
+          {/* CTA Button
+          <button className="w-full bg-[#932A12] text-white px-6 py-4 rounded-full text-lg font-semibold flex items-center justify-center gap-3 hover:bg-[#6F1A07] transition-all shadow-lg shadow-[#932A12]/20">
+            {t.cta.full}
+            <ArrowUpRight className="w-5 h-5" />
+          </button> */}
         </div>
       </div>
     </>

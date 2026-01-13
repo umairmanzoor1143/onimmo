@@ -1,42 +1,79 @@
-"use client";
+import { Dictionary } from "@/lib/dictionaries";
 
-import { useDictionary } from "../dictionary-provider";
-
-export default function SellProcessSection() {
-  const { dictionary } = useDictionary();
+interface SellProcessSectionProps {
+  dictionary: Dictionary;
+}
+const steps = [
+  {
+    id: "01",
+    title: "Free Valuation",
+    desc: "We assess your property’s market value using our expertise and local knowledge.",
+    img: "/assets/sell-step-1.png",
+  },
+  {
+    id: "02",
+    title: "Professional Marketing",
+    desc: "Your property is presented with professional photos, virtual tours, and targeted advertising.",
+    img: "/assets/sell-step-2.png",
+  },
+  {
+    id: "03",
+    title: "Buyer Selection",
+    desc: "We qualify potential buyers and handle all viewings and negotiations on your behalf.",
+    img: "/assets/sell-step-3.png",
+  },
+  {
+    id: "04",
+    title: "Successful Closing",
+    desc: "We guide you through the entire process until the keys are handed over.",
+    img: "/assets/sell-step-4.png",
+  },
+];
+export default function SellProcessSection({ dictionary }: SellProcessSectionProps) {
   const t = dictionary.sellPage.process;
 
   return (
-    <section
-      className="bg-[#0F172A] relative -mt-[100px] sm:-mt-[150px] lg:-mt-[200px] diagonal-clip py-10 sm:py-16 lg:py-20"
-      data-bg="dark"
-    >
-      <div className="pt-32 sm:pt-48 lg:pt-64 pb-16 sm:pb-24 lg:pb-32 px-4 sm:px-6 lg:px-[7rem]">
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <p className="text-[#932A12] text-sm sm:text-base font-medium tracking-wider uppercase mb-4">
-            {t.label}
-          </p>
-          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold max-w-3xl mx-auto">
-            {t.title}
-          </h2>
-        </div>
+    <section className="bg-background py-24">
+      <div className="relative mx-auto max-w-7xl px-6">
+        {/* Zig-zag connector (desktop only) */}
+        <svg
+          className="pointer-events-none absolute left-[6%] right-[6%] top-[110px] hidden h-[120px] w-[88%] lg:block"
+          viewBox="0 0 1000 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="
+              M 0 60
+              Q 125 10 250 60
+              T 500 60
+              T 750 60
+              T 1000 60
+            "
+            fill="none"
+            stroke="rgba(100,116,139,0.45)"
+            strokeWidth="2"
+            strokeDasharray="6 10"
+          />
+        </svg>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {t.steps.map((step: { number: string; title: string; description: string }, index: number) => (
-            <div
-              key={index}
-              className="bg-[#141E30] p-6 sm:p-8 rounded-xl hover:bg-[#1a2740] transition-colors duration-300 group"
-            >
-              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#932A12] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white text-lg sm:text-xl font-bold">
-                  {step.number}
-                </span>
+        <div className="grid grid-cols-1 gap-16 text-center sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map((step) => (
+            <div key={step.id} className="relative z-10">
+              {/* icon */}
+              <div className="relative mx-auto mb-6 h-[180px] w-[180px]">
+                <img
+                  src={step.img}
+                  alt={step.title}
+                  className="h-full w-full object-contain"
+                />
               </div>
-              <h3 className="text-white text-lg sm:text-xl font-semibold mb-3">
+
+              <h3 className="mb-3 text-xl font-extrabold text-white">
                 {step.title}
               </h3>
-              <p className="text-white/70 text-sm sm:text-base leading-relaxed">
-                {step.description}
+
+              <p className="mx-auto max-w-[260px] text-sm leading-relaxed text-slate-500">
+                {step.desc}
               </p>
             </div>
           ))}

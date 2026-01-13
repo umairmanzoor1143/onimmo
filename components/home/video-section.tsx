@@ -1,8 +1,14 @@
-"use client";
+import { Dictionary } from "@/lib/dictionaries";
+import { Locale } from "@/lib/i18n";
 
-export default function VideoSection() {
+interface VideoSectionProps {
+  dictionary: Dictionary;
+  locale: Locale;
+}
+
+export default function VideoSection({ dictionary, locale }: VideoSectionProps) {
   return (
-    <section className="relative -mt-[200px] diagonal-clip" data-bg="dark">
+    <section className="relative diagonal-clip" data-bg="dark">
       {/* Video Content */}
       <div className="relative">
         {/* Video Container */}

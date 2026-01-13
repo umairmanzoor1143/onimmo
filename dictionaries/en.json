@@ -2,10 +2,13 @@
   "header": {
     "logo": "APEX",
     "nav": {
-      "selling": "SELLING",
-      "buying": "BUYING",
-      "aboutUs": "ABOUT US",
-      "contactUs": "CONTACT US"
+      "home": "Home",
+      "sales": "Sales",
+      "purchasing": "Purchasing",
+      "propertyManagement": "Property Management",
+      "partners": "Partners",
+      "aboutUs": "About Us",
+      "contact": "Contact"
     },
     "cta": {
       "full": "Free Property Valuation",
@@ -13,27 +16,36 @@
     }
   },
   "hero": {
-    "subtitle": "BUY, SELL OR HAVE YOUR PROPERTY VALUED IN CENTRAL SWITZERLAND AND ZURICH",
-    "title": "We love the world of property.",
+    "subtitle": "Real Estate Sales · Purchasing · Property Management",
+    "title": "Your trusted partner for buying, selling, and managing properties in Central Switzerland. We turn your real estate goals into reality.",
     "buttons": {
-      "valuate": "Valuate Property",
-      "buy": "Buy Property"
+      "valuate": "Sell a Property",
+      "buy": "Buy a Property"
     }
   },
   "services": {
+    "header": {
+      "title": "Our Services"
+    },
     "sell": {
-      "title": "Sell property",
+      "title": "Sales",
       "paragraphs": [
-        "Personal circumstances, family or career changes, economic necessity, relocation, or inheritance: there are many reasons for selling a property.",
-        "No matter why you want to sell your house or flat: We will find the right buyer for you - quickly, reliably and at the agreed outcome."
+        "Property sales & brokerage"
       ]
     },
     "buy": {
-      "title": "Buy property",
+      "title": "Purchasing & Financing",
       "paragraphs": [
-        "Properties are unique - just like you are. We will find the perfect home for you.",
-        "With our tried and tested scouting methods, we not only customize your search to your wishes and expectations. We often discover new properties long before they even come onto the market."
+        "Buying support incl. financing"
       ]
+    },
+    "management": {
+      "title": "Property Management",
+      "description": "Ongoing management & administration"
+    },
+    "partners": {
+      "title": "Partners",
+      "description": "Our professional network"
     },
     "valuate": {
       "title": "Valuate property",
@@ -42,6 +54,49 @@
         "We value your property - online, uncomplicated, free of charge. And at lightning speed:",
         "In less than 3 minutes you will receive the result of your property valuation and a location evaluation."
       ]
+    }
+  },
+  "whyUs": {
+    "title": "Why choose us ?",
+    "subtitle": "Built specifically for real estate professionals and over time. Stay organized, and close more deals with less effort.",
+    "features": {
+      "marketExperience": {
+        "title": "Market experience",
+        "description": "With years of experience and a deep understanding of the local market, we provide unparalleled insights to guide your property decisions."
+      },
+      "personalConsulting": {
+        "title": "Personal, hands-on consulting",
+        "description": "We offer dedicated, one-on-one guidance throughout the entire process, ensuring your needs are always our top priority."
+      },
+      "partnerNetwork": {
+        "title": "Strong partner & financing network",
+        "description": "Leverage our extensive network of trusted partners, from financing to legal, to ensure a seamless and successful transaction."
+      },
+      "transparentProcess": {
+        "title": "Transparent process & communication",
+        "description": "We believe in clear, honest communication. You'll be kept informed at every step, providing you with confidence and peace of mind."
+      }
+    }
+  },
+  "trust": {
+    "title": "Trust & Credibility",
+    "subtitle": "We build lasting relationships through transparency and proven results.",
+    "stats": {
+      "experience": {
+        "label": "EXPERIENCE",
+        "description": "years in the market"
+      },
+      "properties": {
+        "label": "PROPERTIES",
+        "description": "properties handled"
+      },
+      "clients": {
+        "label": "CLIENTS",
+        "description": "happy clients served"
+      }
+    },
+    "partners": {
+      "title": "Trusted By Leading Partners"
     }
   },
   "expertise": {
@@ -108,11 +163,12 @@
   },
   "sellPage": {
     "hero": {
-      "subtitle": "SELL YOUR PROPERTY IN CENTRAL SWITZERLAND AND ZURICH",
-      "title": "Sell your property at the best price.",
-      "description": "Personal circumstances, family changes, or new opportunities - whatever your reason for selling, we ensure you get the best possible outcome.",
-      "cta": "Free Valuation",
-      "secondaryCta": "Contact Us"
+      "subtitle": "SELLING",
+      "title": "Sell your property with confidence",
+      "description": "We help owners in Central Switzerland and Zurich sell faster and smarter with local market expertise, professional marketing, and hands-on guidance.",
+      "cta": "Get a free valuation",
+      "secondaryCta": "Book a call",
+      "trustNote": "No obligation. Response within 24 hours."
     },
     "process": {
       "label": "HOW IT WORKS",
@@ -209,6 +265,10 @@
       }
     }
   },
+  "finalCta": {
+    "title": "Get an obligation-free consultation",
+    "button": "Contact Us"
+  },
   "footer": {
     "cta": {
       "title": "Would you like to start your property journey together with us?",
@@ -231,10 +291,120 @@
     "social": {
       "label": "Social"
     },
-    "copyright": "APEX Property. All rights reserved.",
+    "copyright": "ONIMMO Property. All rights reserved.",
     "links": {
       "privacy": "Privacy Policy",
       "imprint": "Imprint"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "About ONIMMO",
+      "subtitle": "Your trusted partner for buying, selling, and managing property in Central Switzerland and Zurich."
+    },
+    "whoWeAre": {
+      "title": "Who we are",
+      "description": "ONIMMO is a real estate company focused on personal consulting and long-term client relationships. We support property owners, buyers, and investors with clear processes, local market knowledge, and a strong professional network."
+    },
+    "howWeWork": {
+      "title": "How we work",
+      "items": [
+        "Personal, hands-on consulting",
+        "Transparent communication at every step",
+        "Strong partner and financing network",
+        "Practical, market-driven decisions"
+      ]
+    },
+    "focusAreas": {
+      "title": "What we do",
+      "cards": {
+        "sales": {
+          "title": "Sales",
+          "description": "Professional property sales and brokerage"
+        },
+        "purchasing": {
+          "title": "Purchasing & Financing",
+          "description": "Buying support and investment guidance"
+        },
+        "management": {
+          "title": "Property Management",
+          "description": "Ongoing administration and personal care"
+        }
+      }
+    },
+    "experience": {
+      "title": "Experience & credibility",
+      "stats": [
+        {
+          "value": "15+",
+          "label": "years of experience"
+        },
+        {
+          "value": "500+",
+          "label": "properties handled"
+        },
+        {
+          "value": "300+",
+          "label": "clients supported"
+        }
+      ]
+    },
+    "team": {
+      "title": "Our team",
+      "member": {
+        "name": "Sarah Müller",
+        "role": "Founder & Managing Director",
+        "bio": "With years of experience in the Swiss real estate market, we focus on practical solutions, trust, and long-term value."
+      }
+    },
+    "cta": {
+      "text": "Want to work with us?",
+      "button": "Contact Us"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Contact us",
+      "subtitle": "Get in touch for an obligation-free consultation."
+    },
+    "options": {
+      "call": {
+        "title": "Call us",
+        "number": "+41 41 508 07 07",
+        "hours": "Mon-Fri, 08:00 - 18:00"
+      },
+      "email": {
+        "title": "Email",
+        "address": "info@apex-property.ch",
+        "note": "Response within 24 hours"
+      },
+      "visit": {
+        "title": "Visit",
+        "address": "Rothusstrasse 23, 6331 Hünenberg"
+      }
+    },
+    "form": {
+      "title": "Send us a message",
+      "labels": {
+        "name": "Full name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Send message"
+      },
+      "subjects": {
+        "selling": "Selling a property",
+        "buying": "Buying a property",
+        "management": "Property Management",
+        "partnership": "Partnership",
+        "general": "General inquiry"
+      },
+      "privacy": "Your data will be treated confidentially.",
+      "success": "Thank you for your message. We will get back to you shortly."
+    },
+    "final": {
+      "text": "We respond personally and without obligation."
     }
   }
 }

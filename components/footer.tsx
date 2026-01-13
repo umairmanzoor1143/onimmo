@@ -2,9 +2,11 @@
 
 import { ArrowUpRight } from "lucide-react";
 import { useDictionary } from "./dictionary-provider";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
-  const { dictionary } = useDictionary();
+  const { dictionary, locale } = useDictionary();
   const t = dictionary.footer;
 
   return (
@@ -13,15 +15,11 @@ export default function Footer() {
       <div className="relative overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img
+            src="/assets/luzern.webp"
+            alt="City"
             className="w-full h-full object-cover"
-          >
-            <source src="/assets/city.mp4" type="video/mp4" />
-          </video>
+          />
           <div className="absolute inset-0 bg-[#0F172A]/90" />
         </div>
 
@@ -76,9 +74,9 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 sm:gap-10 lg:gap-12 mb-10 sm:mb-12 lg:mb-16">
             {/* Logo & Tagline */}
             <div className="lg:max-w-sm">
-              <span className="text-white text-2xl sm:text-3xl font-bold tracking-wide">
-                APEX
-              </span>
+              <Link href={`/${locale}`} className="flex items-center gap-3">
+                <Image src="/logo.png" alt="Logo" width={120} height={120} />
+              </Link>
               <p className="text-white/40 text-xs sm:text-sm mt-2 sm:mt-3 leading-relaxed">
                 {t.tagline}
               </p>

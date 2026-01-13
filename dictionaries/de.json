@@ -2,10 +2,13 @@
   "header": {
     "logo": "APEX",
     "nav": {
-      "selling": "VERKAUFEN",
-      "buying": "KAUFEN",
-      "aboutUs": "ÜBER UNS",
-      "contactUs": "KONTAKT"
+      "home": "Home",
+      "sales": "Verkaufen",
+      "purchasing": "Kaufen",
+      "propertyManagement": "Immobilienverwaltung",
+      "partners": "Partner",
+      "aboutUs": "Über Uns",
+      "contact": "Kontakt"
     },
     "cta": {
       "full": "Kostenlose Immobilienbewertung",
@@ -13,27 +16,36 @@
     }
   },
   "hero": {
-    "subtitle": "KAUFEN, VERKAUFEN ODER IHRE IMMOBILIE IN DER ZENTRALSCHWEIZ UND ZÜRICH BEWERTEN LASSEN",
-    "title": "Wir lieben die Welt der Immobilien.",
+    "subtitle": "Immobilienverkauf · Kauf · Verwaltung",
+    "title": "Ihr vertrauenswürdiger Partner für Kauf, Verkauf und Verwaltung von Immobilien in der Zentralschweiz. Wir machen Ihre Immobilienziele zur Realität.",
     "buttons": {
-      "valuate": "Immobilie bewerten",
+      "valuate": "Immobilie verkaufen",
       "buy": "Immobilie kaufen"
     }
   },
   "services": {
+    "header": {
+      "title": "Unsere Dienstleistungen"
+    },
     "sell": {
-      "title": "Immobilie verkaufen",
+      "title": "Verkauf",
       "paragraphs": [
-        "Persönliche Umstände, familiäre oder berufliche Veränderungen, wirtschaftliche Notwendigkeit, Umzug oder Erbschaft: Es gibt viele Gründe für den Verkauf einer Immobilie.",
-        "Egal, warum Sie Ihr Haus oder Ihre Wohnung verkaufen möchten: Wir finden den richtigen Käufer für Sie - schnell, zuverlässig und zum vereinbarten Ergebnis."
+        "Immobilienverkauf & Vermittlung"
       ]
     },
     "buy": {
-      "title": "Immobilie kaufen",
+      "title": "Kauf & Finanzierung",
       "paragraphs": [
-        "Immobilien sind einzigartig - genau wie Sie. Wir finden das perfekte Zuhause für Sie.",
-        "Mit unseren bewährten Scouting-Methoden passen wir Ihre Suche nicht nur an Ihre Wünsche und Erwartungen an. Wir entdecken oft neue Immobilien, lange bevor sie auf den Markt kommen."
+        "Kaufbegleitung inkl. Finanzierung"
       ]
+    },
+    "management": {
+      "title": "Immobilienverwaltung",
+      "description": "Laufende Verwaltung & Administration"
+    },
+    "partners": {
+      "title": "Partner",
+      "description": "Unser professionelles Netzwerk"
     },
     "valuate": {
       "title": "Immobilie bewerten",
@@ -42,6 +54,49 @@
         "Wir bewerten Ihre Immobilie - online, unkompliziert, kostenlos. Und blitzschnell:",
         "In weniger als 3 Minuten erhalten Sie das Ergebnis Ihrer Immobilienbewertung und eine Standortbewertung."
       ]
+    }
+  },
+  "whyUs": {
+    "title": "Warum uns wählen?",
+    "subtitle": "Speziell für Immobilienprofis entwickelt und über die Zeit gewachsen. Bleiben Sie organisiert und schließen Sie mehr Geschäfte mit weniger Aufwand ab.",
+    "features": {
+      "marketExperience": {
+        "title": "Markterfahrung",
+        "description": "Mit jahrelanger Erfahrung und einem tiefen Verständnis des lokalen Marktes bieten wir unvergleichliche Einblicke für Ihre Immobilienentscheidungen."
+      },
+      "personalConsulting": {
+        "title": "Persönliche Beratung",
+        "description": "Wir bieten engagierte, individuelle Beratung während des gesamten Prozesses und stellen sicher, dass Ihre Bedürfnisse immer an erster Stelle stehen."
+      },
+      "partnerNetwork": {
+        "title": "Starkes Partner- & Finanzierungsnetzwerk",
+        "description": "Nutzen Sie unser umfangreiches Netzwerk vertrauenswürdiger Partner, von der Finanzierung bis zur Rechtsberatung, für eine reibungslose Transaktion."
+      },
+      "transparentProcess": {
+        "title": "Transparenter Prozess & Kommunikation",
+        "description": "Wir glauben an klare, ehrliche Kommunikation. Sie werden über jeden Schritt informiert, was Ihnen Sicherheit und Vertrauen gibt."
+      }
+    }
+  },
+  "trust": {
+    "title": "Vertrauen & Glaubwürdigkeit",
+    "subtitle": "Wir bauen langfristige Beziehungen durch Transparenz und nachgewiesene Ergebnisse auf.",
+    "stats": {
+      "experience": {
+        "label": "ERFAHRUNG",
+        "description": "Jahre am Markt"
+      },
+      "properties": {
+        "label": "IMMOBILIEN",
+        "description": "vermittelte Immobilien"
+      },
+      "clients": {
+        "label": "KUNDEN",
+        "description": "zufriedene Kunden"
+      }
+    },
+    "partners": {
+      "title": "Vertraut von führenden Partnern"
     }
   },
   "expertise": {
@@ -108,11 +163,12 @@
   },
   "sellPage": {
     "hero": {
-      "subtitle": "VERKAUFEN SIE IHRE IMMOBILIE IN DER ZENTRALSCHWEIZ UND ZÜRICH",
-      "title": "Verkaufen Sie Ihre Immobilie zum besten Preis.",
-      "description": "Persönliche Umstände, familiäre Veränderungen oder neue Möglichkeiten - was auch immer Ihr Grund für den Verkauf ist, wir sorgen für das bestmögliche Ergebnis.",
+      "subtitle": "VERKAUF",
+      "title": "Verkaufen Sie Ihre Immobilie mit Vertrauen",
+      "description": "Wir helfen Eigentümern in der Zentralschweiz und Zürich, schneller und intelligenter zu verkaufen – mit lokaler Marktexpertise, professionellem Marketing und persönlicher Beratung.",
       "cta": "Kostenlose Bewertung",
-      "secondaryCta": "Kontaktieren Sie uns"
+      "secondaryCta": "Gespräch vereinbaren",
+      "trustNote": "Unverbindlich. Antwort innerhalb von 24 Stunden."
     },
     "process": {
       "label": "SO FUNKTIONIERT ES",
@@ -209,6 +265,10 @@
       }
     }
   },
+  "finalCta": {
+    "title": "Holen Sie sich eine unverbindliche Beratung",
+    "button": "Kontaktieren Sie uns"
+  },
   "footer": {
     "cta": {
       "title": "Möchten Sie Ihre Immobilienreise gemeinsam mit uns starten?",
@@ -235,6 +295,116 @@
     "links": {
       "privacy": "Datenschutzerklärung",
       "imprint": "Impressum"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "Über ONIMMO",
+      "subtitle": "Ihr vertrauenswürdiger Partner für Kauf, Verkauf und Verwaltung von Immobilien in der Zentralschweiz und Zürich."
+    },
+    "whoWeAre": {
+      "title": "Wer wir sind",
+      "description": "ONIMMO ist ein Immobilienunternehmen, das sich auf persönliche Beratung und langfristige Kundenbeziehungen konzentriert. Wir unterstützen Eigentümer, Käufer und Investoren mit klaren Prozessen, lokaler Marktkenntnis und einem starken professionellen Netzwerk."
+    },
+    "howWeWork": {
+      "title": "Wie wir arbeiten",
+      "items": [
+        "Persönliche, praktische Beratung",
+        "Transparente Kommunikation bei jedem Schritt",
+        "Starkes Partner- und Finanzierungsnetzwerk",
+        "Praktische, marktorientierte Entscheidungen"
+      ]
+    },
+    "focusAreas": {
+      "title": "Was wir tun",
+      "cards": {
+        "sales": {
+          "title": "Verkauf",
+          "description": "Professioneller Immobilienverkauf & Vermittlung"
+        },
+        "purchasing": {
+          "title": "Kauf & Finanzierung",
+          "description": "Kaufbegleitung und Investitionsberatung"
+        },
+        "management": {
+          "title": "Immobilienverwaltung",
+          "description": "Laufende Verwaltung & persönliche Betreuung"
+        }
+      }
+    },
+    "experience": {
+      "title": "Erfahrung & Glaubwürdigkeit",
+      "stats": [
+        {
+          "value": "15+",
+          "label": "Jahre Erfahrung"
+        },
+        {
+          "value": "500+",
+          "label": "Immobilien betreut"
+        },
+        {
+          "value": "300+",
+          "label": "zufriedene Kunden"
+        }
+      ]
+    },
+    "team": {
+      "title": "Unser Team",
+      "member": {
+        "name": "Sarah Müller",
+        "role": "Gründerin & Geschäftsführerin",
+        "bio": "Mit jahrelanger Erfahrung im Schweizer Immobilienmarkt setzen wir auf praktische Lösungen, Vertrauen und langfristigen Wert."
+      }
+    },
+    "cta": {
+      "text": "Möchten Sie mit uns arbeiten?",
+      "button": "Kontaktieren Sie uns"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Kontaktieren Sie uns",
+      "subtitle": "Nehmen Sie Kontakt auf für eine unverbindliche Beratung."
+    },
+    "options": {
+      "call": {
+        "title": "Rufen Sie uns an",
+        "number": "+41 41 508 07 07",
+        "hours": "Mo-Fr, 08:00 - 18:00"
+      },
+      "email": {
+        "title": "E-Mail",
+        "address": "info@apex-property.ch",
+        "note": "Antwort innerhalb von 24 Stunden"
+      },
+      "visit": {
+        "title": "Besuchen Sie uns",
+        "address": "Rothusstrasse 23, 6331 Hünenberg"
+      }
+    },
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "labels": {
+        "name": "Vollständiger Name",
+        "email": "E-Mail",
+        "phone": "Telefon (optional)",
+        "subject": "Betreff",
+        "message": "Nachricht",
+        "submit": "Nachricht senden"
+      },
+      "subjects": {
+        "selling": "Immobilie verkaufen",
+        "buying": "Immobilie kaufen",
+        "management": "Immobilienverwaltung",
+        "partnership": "Partnerschaft",
+        "general": "Allgemeine Anfrage"
+      },
+      "privacy": "Ihre Daten werden vertraulich behandelt.",
+      "success": "Danke für Ihre Nachricht. Wir werden uns in Kürze bei Ihnen melden."
+    },
+    "final": {
+      "text": "Wir antworten persönlich und unverbindlich."
     }
   }
 }

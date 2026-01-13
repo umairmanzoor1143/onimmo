@@ -1,10 +1,13 @@
-"use client";
-
 import { ArrowRight } from "lucide-react";
-import { useDictionary } from "../dictionary-provider";
+import { Dictionary } from "@/lib/dictionaries";
+import { Locale } from "@/lib/i18n";
 
-export default function SellCTASection() {
-  const { dictionary } = useDictionary();
+interface SellCTASectionProps {
+  dictionary: Dictionary;
+  locale: Locale;
+}
+
+export default function SellCTASection({ dictionary }: SellCTASectionProps) {
   const t = dictionary.sellPage.cta;
 
   return (
