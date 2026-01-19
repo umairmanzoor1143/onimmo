@@ -406,5 +406,40 @@
     "final": {
       "text": "Wir antworten persönlich und unverbindlich."
     }
+  },
+  "partnersPage": {
+    "hero": {
+      "badge": "Partner Netzwerk",
+      "title": "Unsere Partner",
+      "subtitle": "Wir arbeiten mit den besten Unternehmen zusammen, um Ihnen erstklassigen Service zu bieten."
+    },
+    "partners": {
+      "badge": "Vertrauenswürdige Partner",
+      "title": "Unser Netzwerk",
+      "subtitle": "Dies sind die Unternehmen, denen wir vertrauen und mit denen wir zusammenarbeiten.",
+      "viewDetails": "Details ansehen",
+      "members": "Mitglieder"
+    },
+    "team": {
+      "badge": "Das Team",
+      "title": "Team",
+      "subtitle": "Lernen Sie die Menschen kennen, die hinter unserem Partnerunternehmen stehen."
+    },
+    "detail": {
+      "back": "Zurück zu Partnern",
+      "about": "Über uns",
+      "contact": "Kontaktinformationen",
+      "website": "Webseite",
+      "team": "Unser Team",
+      "teamSubtitle": "Lernen Sie die Profis hinter diesem Partner kennen.",
+      "viewFullProfile": "Vollständiges Profil ansehen",
+      "viewOnLinkedIn": "Auf LinkedIn ansehen",
+      "location": "Standort",
+      "openingHours": "Öffnungszeiten",
+      "bookAppointment": "Termin buchen"
+    },
+    "viewProfile": "Vollständiges Profil ansehen",
+    "viewAllTeam": "Alle Teammitglieder ansehen",
+    "noPartners": "Keine Partner gefunden."
   }
 }

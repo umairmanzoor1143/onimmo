@@ -6,6 +6,7 @@ import VideoSection from "@/components/home/video-section";
 import FinalCtaSection from "@/components/home/final-cta-section";
 import { getDictionary } from "@/lib/dictionaries";
 import { Locale, isValidLocale, defaultLocale } from "@/lib/i18n";
+import { fetchAllPartnerCompanies } from "@/lib/api";
 
 export default async function Home({
   params,
@@ -14,7 +15,12 @@ export default async function Home({
 }) {
   const { locale: localeParam } = await params;
   const locale: Locale = isValidLocale(localeParam) ? localeParam : defaultLocale;
-  const dictionary = await getDictionary(locale);
+  
+  // Fetch all data server-side in parallel - no loading states needed
+  const [dictionary, partners] = await Promise.all([
+    getDictionary(locale),
+    fetchAllPartnerCompanies(),
+  ]);
 
   return (
     <div className="min-h-screen">
@@ -22,7 +28,7 @@ export default async function Home({
       <ServicesSection dictionary={dictionary} locale={locale} />
       <VideoSection dictionary={dictionary} locale={locale} />
       <WhyUsSection dictionary={dictionary} />
-      <TrustSection dictionary={dictionary} />
+      <TrustSection dictionary={dictionary} locale={locale} partners={partners} />
       <FinalCtaSection dictionary={dictionary} locale={locale} />
     </div>
   );

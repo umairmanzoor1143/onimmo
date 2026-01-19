@@ -406,5 +406,40 @@
     "final": {
       "text": "We respond personally and without obligation."
     }
+  },
+  "partnersPage": {
+    "hero": {
+      "badge": "Partner Network",
+      "title": "Our Partners",
+      "subtitle": "We collaborate with the best companies to provide you with top-tier service."
+    },
+    "partners": {
+      "badge": "Trusted Partners",
+      "title": "Meet Our Network",
+      "subtitle": "These are the companies we trust and work with to deliver exceptional results.",
+      "viewDetails": "View Details",
+      "members": "members"
+    },
+    "team": {
+      "badge": "The Team",
+      "title": "Team",
+      "subtitle": "Meet the people behind our partner company."
+    },
+    "detail": {
+      "back": "Back to Partners",
+      "about": "About",
+      "contact": "Contact Information",
+      "website": "Website",
+      "team": "Our Team",
+      "teamSubtitle": "Meet the professionals behind this partner.",
+      "viewFullProfile": "View Full Profile",
+      "viewOnLinkedIn": "View on LinkedIn",
+      "location": "Location",
+      "openingHours": "Opening Hours",
+      "bookAppointment": "Book Appointment"
+    },
+    "viewProfile": "View Full Profile",
+    "viewAllTeam": "View all team members",
+    "noPartners": "No partners found."
   }
 }

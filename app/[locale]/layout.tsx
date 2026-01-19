@@ -6,6 +6,7 @@ import { getDictionary } from "@/lib/dictionaries";
 import { DictionaryProvider } from "@/components/dictionary-provider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { fetchOnimmoCompany } from "@/lib/api";
 
 const frutiger = localFont({
   src: [
@@ -24,7 +25,7 @@ const frutiger = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "APEX - Real Estate",
+  title: "ONIMMO - Real Estate",
   description: "Buy, sell or have your property valued in Central Switzerland and Zurich",
 };
 
@@ -41,15 +42,20 @@ export default async function LocaleLayout({
 }) {
   const { locale: localeParam } = await params;
   const locale: Locale = isValidLocale(localeParam) ? localeParam : defaultLocale;
-  const dictionary = await getDictionary(locale);
+  
+  // Fetch data server-side in parallel
+  const [dictionary, company] = await Promise.all([
+    getDictionary(locale),
+    fetchOnimmoCompany(),
+  ]);
 
   return (
     <html lang={locale}>
       <body className={`${frutiger.variable} antialiased`}>
         <DictionaryProvider dictionary={dictionary} locale={locale}>
-           <Header />
+          <Header />
           {children}
-          <Footer />
+          <Footer dictionary={dictionary} locale={locale} company={company} />
         </DictionaryProvider>
       </body>
     </html>

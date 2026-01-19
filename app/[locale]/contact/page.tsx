@@ -1,17 +1,29 @@
 import { getDictionary } from "@/lib/dictionaries";
-import { Locale, defaultLocale, isValidLocale } from "@/lib/i18n";
+import { fetchOnimmoCompany } from "@/lib/api";
 import { ContactForm } from "@/components/contact-form";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Locale, isValidLocale, defaultLocale } from "@/lib/i18n";
 
-export default async function ContactPage({
-    params,
-}: {
+interface PageProps {
     params: Promise<{ locale: string }>;
-}) {
+}
+
+export default async function ContactPage({ params }: PageProps) {
     const { locale: localeParam } = await params;
     const locale: Locale = isValidLocale(localeParam) ? localeParam : defaultLocale;
     const dictionary = await getDictionary(locale);
     const t = dictionary.contactPage;
+    
+    // Server-side fetch ONIMMO company data - no loading state needed
+    const company = await fetchOnimmoCompany();
+    
+    // Extract contact info from company data or use defaults
+    const phone = company?.phone || "+41 41 508 07 07";
+    const email = company?.email || "info@apex-property.ch";
+    const fullAddress = company?.address 
+        ? `${company.address.street || ''} ${company.address.streetNumber || ''}, ${company.address.zip || ''} ${company.address.city || ''}`.trim()
+        : "Mariahilfgasse 2, 6004 Lucerne";
+    const openingHours = company?.openingHours?.message || t.options.call.hours;
 
     return (
         <div className="min-h-screen bg-white">
@@ -48,7 +60,7 @@ export default async function ContactPage({
                                 <div className="space-y-6">
                                     {/* Phone */}
                                     <a 
-                                        href={`tel:${t.options.call.number}`}
+                                        href={`tel:${phone.replace(/\s/g, '')}`}
                                         className="group flex items-start gap-4"
                                     >
                                         <div className="w-10 h-10 rounded-full bg-[#F5F5F5] flex items-center justify-center flex-shrink-0 group-hover:bg-[#932A12] transition-colors">
@@ -56,17 +68,17 @@ export default async function ContactPage({
                                         </div>
                                         <div>
                                             <p className="text-[#0F172A] font-medium group-hover:text-[#932A12] transition-colors">
-                                                {t.options.call.number}
+                                                {phone}
                                             </p>
                                             <p className="text-[#6B7280] text-sm mt-0.5">
-                                                {t.options.call.hours}
+                                                {openingHours}
                                             </p>
                                         </div>
                                     </a>
 
                                     {/* Email */}
                                     <a 
-                                        href={`mailto:${t.options.email.address}`}
+                                        href={`mailto:${email}`}
                                         className="group flex items-start gap-4"
                                     >
                                         <div className="w-10 h-10 rounded-full bg-[#F5F5F5] flex items-center justify-center flex-shrink-0 group-hover:bg-[#932A12] transition-colors">
@@ -74,7 +86,7 @@ export default async function ContactPage({
                                         </div>
                                         <div>
                                             <p className="text-[#0F172A] font-medium group-hover:text-[#932A12] transition-colors break-all">
-                                                {t.options.email.address}
+                                                {email}
                                             </p>
                                             <p className="text-[#6B7280] text-sm mt-0.5">
                                                 {t.options.email.note}
@@ -95,10 +107,10 @@ export default async function ContactPage({
                                     </div>
                                     <div>
                                         <p className="text-[#0F172A] font-medium">
-                                            {t.options.visit.address}
+                                            {fullAddress}
                                         </p>
                                         <a
-                                            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t.options.visit.address)}`}
+                                            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="inline-flex items-center gap-1 text-sm text-[#932A12] hover:text-[#7a2410] transition-colors mt-2"
@@ -147,7 +159,7 @@ export default async function ContactPage({
             {/* Map Section */}
             <section className="h-[350px] w-full bg-[#F5F5F5] relative border-t border-[#E5E7EB]">
                 <iframe
-                    src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(t.options.visit.address)}&zoom=15`}
+                    src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(fullAddress)}&zoom=15`}
                     className="absolute inset-0 w-full h-full grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
                     style={{ border: 0 }}
                     allowFullScreen

@@ -72,7 +72,15 @@ export default function Header() {
         >
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-3">
-              <Image src="/logo.png" alt="Logo" width={120} height={120} />
+              <Image 
+                src="/logo.png" 
+                alt="Logo" 
+                width={120} 
+                height={120} 
+                className={`transition-all duration-300 ${
+                  isScrolled || isMenuOpen ? "" : "brightness-150"
+                }`}
+              />
           </Link>
 
           {/* Desktop Navigation - Centered */}
@@ -82,7 +90,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={`text-[15px] font-medium transition-colors duration-300 hover:text-[#932A12] ${isActive(item.href)
-                  ? "text-[#932A12]"
+                  ? "text-[#932A12] brightness-150"
                   : isScrolled
                     ? "text-[#34435E]"
                     : "text-white/80"

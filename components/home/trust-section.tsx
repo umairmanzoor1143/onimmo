@@ -1,22 +1,16 @@
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { Dictionary } from "@/lib/dictionaries";
-import { PartnerLogo } from "@/components/partner-logo";
+import { PartnerCompany } from "@/lib/partners";
+import { getPartnerLogo, getPartnerDisplayName } from "@/lib/api";
+import Link from "next/link";
 
 interface TrustSectionProps {
     dictionary: Dictionary;
+    locale: string;
+    partners?: PartnerCompany[];
 }
 
-// Partner logos - placeholder images for now
-const partners = [
-    { name: "Partner 1", logo: "/assets/partners/partner1.svg" },
-    { name: "Partner 2", logo: "/assets/partners/partner2.svg" },
-    { name: "Partner 3", logo: "/assets/partners/partner3.svg" },
-    { name: "Partner 4", logo: "/assets/partners/partner4.svg" },
-    { name: "Partner 5", logo: "/assets/partners/partner5.svg" },
-    { name: "Partner 6", logo: "/assets/partners/partner6.svg" },
-];
-
-export default function TrustSection({ dictionary }: TrustSectionProps) {
+export default function TrustSection({ dictionary, locale, partners = [] }: TrustSectionProps) {
     const t = dictionary.trust;
     // Stats data derived from dictionary
     const stats = [
@@ -176,27 +170,43 @@ export default function TrustSection({ dictionary }: TrustSectionProps) {
                         <p className="text-[#6B7280] text-sm font-medium uppercase tracking-wider mb-8 text-center">
                             {t.partners.title}
                         </p>
-                        <InfiniteSlider
-                            gap={48}
-                            duration={30}
-                            durationOnHover={60}
-                            className="py-4"
-                        >
-                            {partners.map((partner, index) => (
-                                <div
-                                    key={index}
-                                    className="h-12 w-32 flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300"
-                                >
-                                    {partner.logo ? (
-                                        <PartnerLogo name={partner.name} logo={partner.logo} />
-                                    ) : (
-                                        <span className="text-[#6B7280] text-sm font-medium">
-                                            {partner.name}
-                                        </span>
-                                    )}
-                                </div>
-                            ))}
-                        </InfiniteSlider>
+                        {partners.length > 0 ? (
+                            <InfiniteSlider
+                                gap={64}
+                                duration={40}
+                                durationOnHover={50}
+                                className="py-4"
+                            >
+                                {/* Repeat partners to fill the slider */}
+                                {[...partners, ...partners, ...partners, ...partners].map((company, index) => {
+                                    const logo = getPartnerLogo(company);
+                                    const name = getPartnerDisplayName(company);
+                                    const companyId = company.id || company._id;
+                                    
+                                    return (
+                                        <Link
+                                            key={`${companyId}-${index}`}
+                                            href={`/${locale}/partners/${companyId}`}
+                                            className="h-16 w-40 flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 grayscale hover:grayscale-0"
+                                        >
+                                            {logo ? (
+                                                <img
+                                                    src={logo}
+                                                    alt={name}
+                                                    className="max-h-full max-w-full object-contain"
+                                                />
+                                            ) : (
+                                                <span className="text-[#6B7280] text-sm font-medium whitespace-nowrap">
+                                                    {name}
+                                                </span>
+                                            )}
+                                        </Link>
+                                    );
+                                })}
+                            </InfiniteSlider>
+                        ) : (
+                            <p className="text-center text-[#6B7280] py-4">No partners available</p>
+                        )}
                     </div>
                 </div>
 

@@ -1,13 +1,27 @@
-"use client";
-
 import { ArrowUpRight } from "lucide-react";
-import { useDictionary } from "./dictionary-provider";
 import Link from "next/link";
 import Image from "next/image";
+import { PartnerCompany } from "@/lib/partners";
+import { Dictionary } from "@/lib/dictionaries";
 
-export default function Footer() {
-  const { dictionary, locale } = useDictionary();
+interface FooterProps {
+  dictionary: Dictionary;
+  locale: string;
+  company?: PartnerCompany | null;
+}
+
+export default function Footer({ dictionary, locale, company }: FooterProps) {
   const t = dictionary.footer;
+  
+  // Extract contact info from company data or use defaults
+  const phone = company?.phone || "+41 41 508 07 07";
+  const email = company?.email || "info@apex-property.ch";
+  const address1 = company?.address 
+    ? `${company.address.street || ''} ${company.address.streetNumber || ''}`.trim()
+    : "Mariahilfgasse 2";
+  const address2 = company?.address 
+    ? `${company.address.zip || ''} ${company.address.city || ''}`.trim()
+    : "6004 Lucerne";
 
   return (
     <footer data-bg="dark">
@@ -36,7 +50,7 @@ export default function Footer() {
             {/* Contact Options - Horizontal Layout */}
             <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap lg:items-center gap-4 sm:gap-6 lg:gap-12">
               <a
-                href="tel:+41415080707"
+                href={`tel:${phone.replace(/\s/g, '')}`}
                 className="group flex items-center gap-3 sm:gap-4 text-white hover:text-[#932A12] transition-colors"
               >
                 <span className="text-sm sm:text-base lg:text-lg xl:text-xl">{t.cta.links.call}</span>
@@ -46,7 +60,7 @@ export default function Footer() {
               <span className="hidden lg:block w-px h-6 bg-white/20" />
 
               <a
-                href="mailto:info@apex-property.ch"
+                href={`mailto:${email}`}
                 className="group flex items-center gap-3 sm:gap-4 text-white hover:text-[#932A12] transition-colors"
               >
                 <span className="text-sm sm:text-base lg:text-lg xl:text-xl">{t.cta.links.email}</span>
@@ -86,17 +100,17 @@ export default function Footer() {
             <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 lg:gap-20">
               <div>
                 <p className="text-white/40 text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">{t.location.label}</p>
-                <p className="text-white text-sm sm:text-base">{t.location.address1}</p>
-                <p className="text-white text-sm sm:text-base">{t.location.address2}</p>
+                <p className="text-white text-sm sm:text-base">{address1}</p>
+                <p className="text-white text-sm sm:text-base">{address2}</p>
               </div>
 
               <div>
                 <p className="text-white/40 text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">{t.contact.label}</p>
-                <a href="mailto:info@apex-property.ch" className="text-white text-sm sm:text-base block hover:text-[#932A12] transition-colors">
-                  info@apex-property.ch
+                <a href={`mailto:${email}`} className="text-white text-sm sm:text-base block hover:text-[#932A12] transition-colors">
+                  {email}
                 </a>
-                <a href="tel:+41415080707" className="text-white text-sm sm:text-base block hover:text-[#932A12] transition-colors">
-                  +41 41 508 07 07
+                <a href={`tel:${phone.replace(/\s/g, '')}`} className="text-white text-sm sm:text-base block hover:text-[#932A12] transition-colors">
+                  {phone}
                 </a>
               </div>
 
