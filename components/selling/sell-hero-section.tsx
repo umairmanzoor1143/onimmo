@@ -73,7 +73,7 @@ export default function SellHeroSection({ dictionary, locale }: SellHeroSectionP
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-6">
             {/* Primary CTA */}
             <Link
-              href={`/${locale}/valuation`}
+             href={`/${locale}/contact`}
               className="group inline-flex justify-center items-center gap-2.5 bg-[#932A12] text-white px-8 py-4 rounded-full text-[16px] font-semibold hover:bg-[#7a2410] transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
             >
               <span>{t.cta}</span>

@@ -1,13 +1,14 @@
 import { ArrowRight } from "lucide-react";
 import { Dictionary } from "@/lib/dictionaries";
 import { Locale } from "@/lib/i18n";
+import Link from "next/link";
 
 interface SellCTASectionProps {
   dictionary: Dictionary;
   locale: Locale;
 }
 
-export default function SellCTASection({ dictionary }: SellCTASectionProps) {
+export default function SellCTASection({ dictionary, locale }: SellCTASectionProps) {
   const t = dictionary.sellPage.cta;
 
   return (
@@ -22,13 +23,25 @@ export default function SellCTASection({ dictionary }: SellCTASectionProps) {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="inline-flex items-center gap-2 bg-[#932A12] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full text-sm sm:text-base lg:text-lg font-semibold uppercase tracking-wide hover:bg-[#6F1A07] transition-all group">
+             <Link
+              href={`/${locale}/contact`}
+              className=""
+            >
+ <button className="inline-flex items-center gap-2 bg-[#932A12] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full text-sm sm:text-base lg:text-lg font-semibold uppercase tracking-wide hover:bg-[#6F1A07] transition-all group">
               {t.primaryButton}
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="inline-flex items-center gap-2 border border-white/30 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full text-sm sm:text-base lg:text-lg font-semibold uppercase tracking-wide hover:bg-white/10 transition-all">
+            </Link>
+             <Link
+              href={`/${locale}/contact`}
+              className=""
+            >
+               <button className="inline-flex items-center gap-2 border border-white/30 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full text-sm sm:text-base lg:text-lg font-semibold uppercase tracking-wide hover:bg-white/10 transition-all">
               {t.secondaryButton}
             </button>
+            </Link>
+           
+           
           </div>
         </div>
       </div>

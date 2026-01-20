@@ -51,8 +51,8 @@ export default function Header() {
   const navItems = [
     { href: `/${locale}`, label: t.nav.home },
     { href: `/${locale}/selling`, label: t.nav.sales },
-    { href: `/${locale}/purchasing`, label: t.nav.purchasing },
-    { href: `/${locale}/property-management`, label: t.nav.propertyManagement },
+    // { href: `/${locale}/purchasing`, label: t.nav.purchasing },
+    // { href: `/${locale}/property-management`, label: t.nav.propertyManagement },
     { href: `/${locale}/partners`, label: t.nav.partners },
     { href: `/${locale}/about`, label: t.nav.aboutUs },
     { href: `/${locale}/contact`, label: t.nav.contact },

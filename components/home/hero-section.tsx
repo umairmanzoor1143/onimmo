@@ -81,13 +81,13 @@ export default function HeroSection({ dictionary, locale }: HeroSectionProps) {
             </Link>
 
             {/* Buy a Property - Outline button */}
-            <Link
+            {/* <Link
               href={`/${locale}/purchasing`}
               className="group inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm text-white px-7 py-4 rounded-full text-[15px] font-semibold border border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300"
             >
               <span>{t.buttons.buy}</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
+            </Link> */}
 
             {/* Contact Us - Accent button */}
             <Link
